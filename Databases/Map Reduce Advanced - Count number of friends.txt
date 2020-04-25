@@ -1,0 +1,8 @@
+def mapper(record):
+    #Start writing the Map code here
+    a=record.split()
+    mapReducer.emitIntermediate(a[0],a[1])
+    mapReducer.emitIntermediate(a[1],a[0])
+def reducer(key, list_of_values):
+    #Start writing the Reduce code here
+    mapReducer.emit((key,len(list_of_values)))

@@ -1,0 +1,3 @@
+def bigSorting(unsorted):
+    sl = sorted(unsorted, key=lambda s: (len(s), s))
+    return sl;

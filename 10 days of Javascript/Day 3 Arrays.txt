@@ -1,0 +1,8 @@
+ // Complete the function
+    nums.sort((a, b) => b - a);
+
+    for (var i = 0;; i++) {
+        if (nums[i] !== nums[0]) {
+            return nums[i];
+        }
+    }

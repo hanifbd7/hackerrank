@@ -1,0 +1,21 @@
+/*
+ * Complete the vowelsAndConsonants function.
+ * Print your output using 'console.log()'.
+ */
+function vowelsAndConsonants(s) {
+    for (var i = 0; i < s.length; i++) {
+        if (isVowel(s[i])) {
+            console.log(s[i]);
+        }
+    }
+
+    for (var i = 0; i < s.length; i++) {
+        if (!isVowel(s[i])) {
+            console.log(s[i]);
+        }
+    }
+}
+
+function isVowel(ch) {
+    return ch === 'a' || ch === 'e' || ch === 'i' || ch === 'o' || ch === 'u';
+}

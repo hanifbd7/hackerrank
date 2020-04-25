@@ -1,0 +1,8 @@
+  // Write your code here
+    area = length * width;
+     
+    
+    // Write your code here
+    perimeter = (length + width) * 2;
+    
+    

@@ -1,0 +1,4 @@
+
+# Write the XPath selector for listing the title of the second movie for which the marked shelf = "B".
+# Fill in the blanks to complete the required XPath selector query
+puts doc.elements.each("collection/movie[@shelf = 'B'][2]/@title")

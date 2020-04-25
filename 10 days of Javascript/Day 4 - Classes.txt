@@ -1,0 +1,13 @@
+class Polygon {
+    constructor(sideLengths) {
+        this.sideLengths = sideLengths;
+    }
+
+    perimeter() {
+        let result = 0;
+        for (let i = 0; i < this.sideLengths.length; i++) {
+            result += this.sideLengths[i];
+        }
+        return result;
+    }
+}

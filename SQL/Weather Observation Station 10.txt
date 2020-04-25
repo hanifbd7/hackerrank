@@ -1,0 +1,4 @@
+
+SELECT distinct CITY
+from STATION 
+WHERE  lower(substr(city,length(city),length(city))) not in('a','e','i','o','u')

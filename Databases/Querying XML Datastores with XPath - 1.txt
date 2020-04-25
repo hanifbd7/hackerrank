@@ -1,0 +1,4 @@
+# XPath Selector for listing the titles of the movies, in the same order as which they occur in the given XML.
+# Fill in the blanks to complete the required XPath selector query
+
+puts doc.elements.each("collection/movie/@title")

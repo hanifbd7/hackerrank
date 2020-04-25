@@ -1,0 +1,16 @@
+def largestPermutation(k, arr):
+    N = len(arr)
+    index = [0] * (N + 1)
+    for i, x in enumerate(arr):
+        index[x] = i
+
+    i = 0
+    while i < k and i < N:
+        if arr[i] == N - i:
+            k += 1
+        else:
+            arr[index[N - i]], index[arr[i]] = arr[i], index[N - i]
+            arr[i], index[N - i] = N - i, i
+        i += 1
+        
+    return(arr)

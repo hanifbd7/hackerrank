@@ -1,0 +1,3 @@
+# XPath Selector for listing the titles of the last two movies in the list, listed in the same order as which they occur in the given XML.
+# Fill in the blanks to complete the required XPath selector query
+puts doc.elements.each("collection/movie[position() > last() - 2]/@title")

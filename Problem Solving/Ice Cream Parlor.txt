@@ -1,0 +1,6 @@
+def icecreamParlor(m, arr):
+    memo = {}
+    for i, c in enumerate(arr):
+        if (m - c) in memo:
+            return((memo[m - c], i + 1))
+        memo[c] = i + 1

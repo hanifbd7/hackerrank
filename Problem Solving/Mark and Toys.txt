@@ -1,0 +1,12 @@
+def maximumToys(prices, k):
+    sum=0
+    cout=0
+    list.sort(prices)
+    for i in range(len(prices)):
+        if sum + prices[i]<=k:
+            sum=sum + prices[i]
+            cout=cout+1
+        else:
+            break
+
+    return(cout);

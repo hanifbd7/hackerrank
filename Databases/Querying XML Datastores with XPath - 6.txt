@@ -1,0 +1,3 @@
+
+#XPath selector for picking up the name of the movie for which the description contains the substring "bit"
+puts doc.elements["collection/movie[contains(description, 'bit')]/@title"]

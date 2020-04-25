@@ -1,0 +1,26 @@
+def mapper(record):
+    #Start writing the Map code here
+    fields = record.replace('\n', '').split(',')
+    
+    if fields[0] == 'Employee':
+        person_name = fields[1]
+        ssn = fields[2]
+        mapReducer.emitIntermediate(ssn, (fields[0], person_name))
+    else:
+        ssn = fields[1]
+        department_name = fields[2]
+        mapReducer.emitIntermediate(ssn, (fields[0], department_name))
+
+def reducer(key, list_of_values):
+    #Start writing the Reduce code here
+    person_names = []
+    department_names = []
+    for label, value in list_of_values:
+        if label == 'Employee':
+            person_names.append(value)
+        else:
+            department_names.append(value)
+    
+    for person_name in person_names:
+        for department_name in department_names:
+            mapReducer.emit((key, person_name, department_name))

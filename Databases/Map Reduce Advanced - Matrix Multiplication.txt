@@ -1,0 +1,16 @@
+import itertools
+
+def mapper(matrix1, matrix2):
+    #Start writing the Map code here
+    n = len(matrix1)
+    k = len(matrix1[0])
+    m = len(matrix2[0])
+    
+    for i in xrange(n):
+        for j in xrange(m):
+            for p in xrange(k):
+                mapReducer.emitIntermediate((i, j), (matrix1[i][p], matrix2[p][j]))
+
+def reducer(key, list_of_values):
+    #Start writing the Reduce code here
+    mapReducer.emit((key[0], key[1], sum(itertools.starmap(lambda x, y: x * y, list_of_values))))

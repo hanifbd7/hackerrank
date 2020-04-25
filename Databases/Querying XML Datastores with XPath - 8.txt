@@ -1,0 +1,1 @@
+puts doc.elements.each("string-length(collection/movie[2]/description/text())")

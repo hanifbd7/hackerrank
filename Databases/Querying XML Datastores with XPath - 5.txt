@@ -1,0 +1,4 @@
+# XPath selector for picking up the shelf of the movie named 'Transformers'
+# Fill in the blanks to complete the required XPath selector query
+# Assume there is only ONE such movie.
+puts doc.elements["collection/movie[@title = 'Transformers']/@shelf"]

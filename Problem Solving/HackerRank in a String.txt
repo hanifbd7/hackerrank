@@ -1,0 +1,12 @@
+def hackerrankInString(s):
+    org = "hackerrank"
+    j = 0
+    for i in range(0,len(s)):
+        if org[j] == s[i] and j <= 9:
+            j += 1
+        if j == len(org):
+            break
+    if j == 10:
+        return("YES")
+    else:
+        return("NO")

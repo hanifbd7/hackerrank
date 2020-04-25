@@ -1,0 +1,2 @@
+#XPath selector for picking up the popularity of the movie with the title "Trigun"
+puts doc.elements["collection/movie[@title = 'Trigun']/popularity/text()"]

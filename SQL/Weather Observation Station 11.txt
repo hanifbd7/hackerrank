@@ -1,0 +1,4 @@
+
+select Distinct City
+From Station
+Where Lower(Left(City,1)) not in ('a','e','i','o','u') or Lower(Right(City,1)) not in ('a','e','i','o','u')
