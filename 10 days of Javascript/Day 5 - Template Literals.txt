@@ -1,0 +1,5 @@
+function sides(literals, ...expressions) {
+    let [area, perimeter] = expressions;
+    return [(perimeter - Math.sqrt(perimeter * perimeter - 16 * area)) / 4,
+            (perimeter + Math.sqrt(perimeter * perimeter - 16 * area)) / 4];
+}
